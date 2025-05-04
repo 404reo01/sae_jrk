@@ -1,7 +1,10 @@
 # sae_jrk
 <<<<<<< HEAD
+<<<<<<< HEAD
 Projet sae
 =======
+=======
+>>>>>>> 8ff421a7d0dbc2360e96dca9fc01138fb574f10c
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -30,4 +33,7 @@ npm run dev
 ```sh
 npm run build
 ```
+<<<<<<< HEAD
 >>>>>>> 73d092a (initial commit)
+=======
+>>>>>>> 8ff421a7d0dbc2360e96dca9fc01138fb574f10c
