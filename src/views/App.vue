@@ -1,16 +1,11 @@
-<script>
-import CarCard from '@/components/card_car.vue';
-
-export default {
-  components: { CarCard }
-};
+<script setup>
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="flex justify-center items-center min-h-screen bg-gray-100">
-    <CarCard />
-  </div>
+  <RouterView />
 </template>
 
+<style scoped>
 
-<style scoped>  </style>
+</style>
