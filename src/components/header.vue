@@ -1,17 +1,22 @@
 <template>
-  <div class="flex justify-between pt-5 ">
-    <img src="@/assets/logo.png" alt="" class="size-20 flex items-center justify-start ml-5" />
-  
-    <div class="border-white border-2 text-white rounded-2xl flex justify-end w-fit px-2.5 h-15">
-      <div class="flex items-center space-x-20 text-xl justify-center">    
-        <router-link to="/login" class="hover:underline flex justify-end">Login / Register</router-link>
-      </div>
+  <header class="w-full bg-black flex items-center justify-between px-8 py-4">
+    <div class="flex-1 flex justify-start">
+      <img src="@/assets/logo.png" alt="Logo" class="h-24" />
     </div>
-  </div>
+    <div class="flex-1 flex justify-end space-x-4">
+      <router-link
+        to="/profile"
+        class="border border-white text-white rounded-lg px-6 py-2 hover:bg-white hover:text-black transition"
+      >
+        Voir profil
+      </router-link>
+      <router-link
+        to="/login"
+        class="border border-white text-white rounded-lg px-6 py-2 hover:bg-white hover:text-black transition"
+      >
+        Login / Register
+      </router-link>
+    </div>
+  </header>
 </template>
 
-<script>
-export default {
-  name: "Navbar",
-};
-</script>
