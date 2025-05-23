@@ -5,6 +5,8 @@ import heroCar from '@/assets/hero_car.jpg'
 import Service from '@/components/Services.vue'
 import CarCard from '@/components/CardCar.vue'
 import CardCategorie from '@/components/CardCategorie.vue'
+import Footer from '@/components/footer.vue'
+import SearchBar from '@/components/SearchBar.vue'
 const brands = [
   { name: 'audi', icon: new URL('@/assets/icon_audi.png', import.meta.url).href },
   { name: 'bmw', icon: new URL('@/assets/icon_bmw.png', import.meta.url).href },
@@ -31,16 +33,21 @@ const categories = [
 
 <template>
   <div
-    class="min-h-screen bg-cover bg-center"
+    class="min-h-screen bg-cover bg-center relative"
     :style="{ backgroundImage: `url(${heroCar})` }"
   >
     <Header />
     <HeroSection />
-    
+    <!-- SearchBar chevauchante, légèrement plus haut -->
+    <div class="absolute left-1/2 -translate-x-1/2 top-[85%] z-10 w-full flex justify-center">
+      <div class="w-full max-w-xl">
+        <SearchBar />
+      </div>
+    </div>
   </div>
+
   <div class="max-w-6xl mx-auto py-16">
     <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Nos marques partenaires</h2>
-    
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       <CarCard
         v-for="brand in brands"
@@ -65,7 +72,8 @@ const categories = [
       </div>
     </div>
     <Service />
-    </div>
-
-  
+  </div>
+  <div>
+    <Footer />
+  </div>
 </template>
